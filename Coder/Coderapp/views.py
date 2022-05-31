@@ -2,18 +2,18 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 
-def home(request):
+def Home(request):
 
         return render(request,"Coderapp/home.html")
     
-def Cursos(request):
+def Producto(request):
 
-        return render(request,"Coderapp/cursos.html")
+        return render(request,"Coderapp/producto.html")
     
-def Blog(request):
+def Vendedor(request):
 
-        return render(request,"Coderapp/blog.html")
+        return render(request,"Coderapp/vendedor.html")
     
-def Contacto(request):
+def Sucursal(request):
 
-        return render(request,"Coderapp/contacto.html")
+        return render(request,"Coderapp/sucursal.html")

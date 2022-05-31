@@ -35,16 +35,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="home.html">Inicio</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="cursos.html">Cursos</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Producto' %}">Productos</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Vendedor' %}">Vendedores</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="contacto.html">Contacto</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Sucursal' %}">Sucursales</a>
           </li>
 
          
@@ -63,6 +63,8 @@
  
           <p class="mb-3">Texto Ejemplo
           </p>
+          {% block contenido %}
+          {% endblock %}
          
         </div>
       </div>
