@@ -4,7 +4,8 @@ from Coderapp import views
 
 urlpatterns = [
     path('', views.Home, name="Home"),
-    path('producto/', views.Producto, name="Producto"),
-    path('vendedor/', views.Vendedor, name="Vendedor"),
-    path('sucursal/', views.Sucursal, name="Sucursal"),
+    path('producto/', views.VistaProducto, name="Producto"),
+    path('vendedor/', views.VistaVendedor, name="Vendedor"),
+    path('sucursal/', views.VistaSucursal, name="Sucursal"),
+    path('buscarproductos/', views.BuscarProducto, name="BuscarProducto"),
 ]
