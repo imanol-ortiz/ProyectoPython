@@ -3,5 +3,16 @@
 {% load static %}
 
 {% block contenido %}
+
+{% if miformulario.errors %}
+<p style="color:red">Estan mal los datos</p>
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+    <table>
+    {{ miformulario.as_table }}
+    </table>
+    <input type="submit", value="Enviar">
+</form>
 <h1>Productos</h1>
 {% endblock %}
