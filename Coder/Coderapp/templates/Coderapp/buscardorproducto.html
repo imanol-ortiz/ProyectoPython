@@ -1,0 +1,32 @@
+{% extends "Coderapp/home.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<h2>Buscar producto</h2>
+<form action="{% url 'BuscarProducto' %}" method=GET>
+    <div>
+        <input type="text" name="text_search" placeholder="buscar por nombre">
+        <input type="submit" value="buscar por nombre">
+    </div>
+</form>
+
+{% if producto %}
+
+<p>Estamos buscando el producto {{nombre}}</p>
+
+    <ul>
+    {% for prod in producto %}
+    <li>Producto: {{prod.nombre}}</li>
+    <li>Stock: {{prod.stock}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+<p>No hay datos</p>
+
+{% endif %}
+<p style="color:red;">{{respuesta}}</p>
+
+{% endblock %}

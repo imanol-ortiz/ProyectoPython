@@ -62,12 +62,15 @@ def VistaSucursal(request):
 
 def BuscarProducto(request):
         
-        if request.GET["nombre"]:
-                nombre=request.GET["nombre"]
+
+        if request.GET["text_search"]:
+                nombre=request.GET["text_search"]
                 producto=Producto.objects.filter(nombre__icontains=nombre)
 
-                return render(request,"Coderapp/home.html", {"producto":producto, "nombre":nombre})
+                return render(request,"Coderapp/BuscardorProducto.html", {"producto":producto, "nombre":nombre})
         else:
-                respuesta="no hay datos"
+                respuesta="no hay datos ingresados"
+                return render(request,"Coderapp/BuscardorProducto.html", {"respuesta":respuesta})
 
-        return render(request,"Coderapp/home.html", {"respuesta":respuesta})
+def BuscadorProducto(request):
+        return render(request,"Coderapp/BuscardorProducto.html")
